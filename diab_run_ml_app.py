@@ -34,7 +34,8 @@ def get_value(val,my_dict):
 			return value
 
 # Load ML Models
-@st.cache
+#@st.cache
+@st.cache(allow_output_mutation=True)
 def load_model(model_file):
 	loaded_model = joblib.load(open(os.path.join(model_file),"rb"))
 	return loaded_model
