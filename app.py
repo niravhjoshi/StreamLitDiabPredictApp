@@ -33,9 +33,9 @@ def main():
 
 	else:
 		st.subheader("About")
-		st.text("Welcome to Informatica Hackathon 2020")
+		st.text("Welcome to Informatica Hackathon 2021")
 		st.text("Team AI/ML IICS")
-		st.text("By Nirav Joshi")
+		st.text("By Nirav,Chandra,Vineeth,Mary,Vishal")
 
 if __name__ == '__main__':
 	main()

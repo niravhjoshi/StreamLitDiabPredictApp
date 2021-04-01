@@ -5,21 +5,17 @@ import numpy as np
 
 attrib_info = """
 #### Attribute Information:
-    - Age 5-90
-    - Patternal Family History 0.No 1.Yes
-    - Matternal Family History 0.No 1.Yes
-    
-    - Weight_KG 10-400KG
+    - Age 5-120
+    - Weight_KG 10-300KG
     - Height_Inch 3-10 Inch.
     - Gender 1.Male, 0.Female.
-    - Diabetes Hyper 1.Yes, 2.No.
+    
 """
 label_dict = {"No":0,"Yes":1}
 gender_map = {"Female":0,"Male":1}
 target_label_map = {"Negative":0,"Positive":1}
 
-['Age','Patternal_Family','Matternal_Family','Weight_KG',
- 'Height_Inch','Gender','Diabetes_Status']
+['Age','Weight_KG','Height_Inch','Gender']
 
 
 def get_fvalue(val):
@@ -55,8 +51,8 @@ def diab_run_ml_app():
     with col1:
         age = st.number_input("Age", 5, 100)
         gender = st.radio("Gender", ("Female", "Male"))
-        Patternal_DiabeticHistory = st.radio("Patternal Side DiabeticHistory", ["No", "Yes"])
-        Matternal_DiabeticHistory = st.radio("Matternal Side DiabeticHistory", ["No", "Yes"])
+        #Patternal_DiabeticHistory = st.radio("Patternal Side DiabeticHistory", ["No", "Yes"])
+        #Matternal_DiabeticHistory = st.radio("Matternal Side DiabeticHistory", ["No", "Yes"])
         Weight_Kg = st.number_input("Weight in KG", 5, 400)
         Height_Inch = st.number_input("Height Inch", 2, 11)
 
@@ -64,8 +60,8 @@ def diab_run_ml_app():
         results = {
             'Age':age,
             'Gender':gender,
-            'Patternal_Diabetic':Patternal_DiabeticHistory,
-            'Matternal_Diabetic':Matternal_DiabeticHistory,
+            #'Patternal_Diabetic':Patternal_DiabeticHistory,
+            #'Matternal_Diabetic':Matternal_DiabeticHistory,
             'Weight_KG':Weight_Kg,
             'Height_Inch':Height_Inch
         }
